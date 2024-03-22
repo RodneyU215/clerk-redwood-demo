@@ -26,10 +26,10 @@ export const getCurrentUser = async (
     return null
   }
 
-  const { id, ..._rest } = decoded
+  const { id, publicMetadata, ..._rest } = decoded
 
   // Be careful to only return information that should be accessible on the web side.
-  return { id }
+  return { id, publicMetadata }
 }
 
 /**

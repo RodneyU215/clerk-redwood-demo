@@ -23,6 +23,7 @@ const OnboardingPage = () => {
       console.error('Failed to complete onboarding:', e)
       console.error('Mutation Error:', error)
     }
+    await user.reload()
     navigate(routes.home())
   }
 

@@ -30,22 +30,22 @@ export default function AddUser({
     })
   }
   return (
-    <>
+    <div className="flex flex-row">
       <input
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="User email"
-        className="input input-bordered input-primary w-full max-w-xs"
+        className="input input-bordered input-primary w-full max-w-xs border"
       />
       <button
-        className="btn btn-primary ml-4"
+        className="btn btn-primary ml-4 rounded-lg border p-2"
         onClick={handleAddUser}
         disabled={loading}
       >
         Add
       </button>
       {error && <div>Error: {error.message}</div>}
-    </>
+    </div>
   )
 }

@@ -49,7 +49,7 @@ const OrganizationList: React.FC<OrganizationListProps> = ({ userId }) => {
                 className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
               >
                 Member count
-              </th>{' '}
+              </th>
               <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
                 Add User
               </th>

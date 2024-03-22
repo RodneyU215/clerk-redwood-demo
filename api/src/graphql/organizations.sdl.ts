@@ -1,8 +1,6 @@
 import clerkClient from '@clerk/clerk-sdk-node'
 import { gql } from 'graphql-tag'
 
-import { getCurrentUser } from 'src/lib/auth'
-
 export const schema = gql`
   type Organization {
     id: String!
@@ -75,7 +73,7 @@ export const resolvers = {
       if (!user) {
         throw new Error('User not found')
       }
-      await clerkClient.users.updateUserMetadata(user.id, {
+      await clerkClient.users.updateUser(user.id, {
         publicMetadata: { isOnboarded: true },
       })
       return true
