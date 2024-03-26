@@ -1,7 +1,6 @@
-import { SignUpButton, SignUp } from '@clerk/clerk-react'
+import { SignUp } from '@clerk/clerk-react'
 
-const SignUpPage = () => (
-  <SignUp routing="path" path="/sign-up" redirectUrl="/onboarding" />
-)
+// Routing=Path requires a wildcard route.
+const SignUpPage = () => <SignUp routing="hash" redirectUrl="/onboarding" />
 
 export default SignUpPage
